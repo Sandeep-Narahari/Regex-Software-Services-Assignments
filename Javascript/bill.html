@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 400px;
+            text-align: center;
+            margin:auto;
+            margin-top: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <fieldset>
+            <table>
+                <label for="calls">Enter number of calls</label><br> <br>
+                <input type="number" id="calls" ><br><br>
+                <button type="submit" onclick=callCharges()>Submit</button> <br> <br>
+                <label for="sms">Enter SMS</label> <br> <br>
+                <input type="number" id="sms"> <br> <br>
+                <button type="submit" onclick=smsCharges()>Submit</button>
+
+
+                
+
+            </table>
+        </fieldset>
+    </div>
+    
+
+<script>
+     function callCharges(){
+         var calls=document.getElementById("calls").value
+         var callCharges
+         if (calls<=50) {
+             callCharges=calls*0.50
+            alert("Your call Charges :"+callCharges)
+             
+         }
+         else if(calls>50 && calls<=150){
+             callCharges=calls*0.70
+             alert("Your call Charges :"+callCharges)
+         }
+         else if(calls>150 && calss<=300){
+             callCharges=calls*0.85
+             alert("Your call Charges :"+callCharges)
+         }
+         else if(calls>300){
+             callCharges=calls*0.95
+             alert("Your call Charges :"+callCharges)
+             
+         }
+     }
+     function smsCharges(){
+         var sms=document.getElementById("sms").value
+         var smsCharges
+
+         if (sms<=50) {
+            alert("No Charges")
+             
+         }
+         else if(sms<=150){
+             smsCharges=sms*0.25
+             alert("Your Sms Charges :"+smsCharges)
+         }
+         else if(sms<=300){
+             smsCharges=sms*0.40
+             alert("Your Sms Charges :"+smsCharges)
+         }
+         else if(calls>300){
+             smsCharges=sms*0.45
+             alert("Your Sms Charges :"+smsCharges)
+         }
+
+     }
+
+
+
+</script>
+    
+</body>
+</html>

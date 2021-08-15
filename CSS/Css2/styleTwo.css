@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+    
+}
+.body{
+    background-color: #E2E5DE;
+}
+.container{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 300px;
+    padding: 0;
+    border: 1px solid rgb(82, 25, 25);
+    display: inline-block;
+    background-color: white;
+    
+
+}
+.sno{
+    background-color: #EEB500;
+    color:white ;
+    width: 20px;
+    text-align: center;
+    line-height: 30px;
+    margin:5px;
+   
+
+}
+img{
+    width: 290px;
+    height: 360px;
+    margin:auto 5px;
+}
+.heading{
+    color: #0A5A78;
+    padding-left: 5px;
+	padding-top: 10px;
+    padding-bottom: 15px;
+    font-weight: bold;
+	font-size: 15px;
+
+}
+.description{
+    color: #4C4C4C;
+    
+    font-size: 20px;
+    margin: 7px;
+    overflow-y: scroll;
+    height: 100px
+    
+}
+.subscribe{
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin: 3px;
+    
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Switcher</title>
+    <style>
+        .box{
+            margin:auto;
+            margin-top: 70px;
+            text-align: center;
+            border-radius: 25px;
+            border: 20px coral solid;
+            width: 800px;
+            
+        }
+        #img{
+            width: 700px;
+            height: 400px;
+            border-radius: 19px;
+            border: 10px rgb(22, 166, 185) solid;
+            margin: 5% auto;
+        
+
+        }
+        
+        button{
+          
+            margin-bottom: 10px;
+            font-size: 20px;
+            padding:5px;
+            width: 90px;
+            height: 40px;
+            background-color: black;
+            color: white;
+        }   
+    </style>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+         var i=1;
+        $(document).ready(function(){
+            $("#next").click(function(){
+                if (i<4) {
+                    i=i+1;    
+                }
+                else{
+                    i=1;
+                }
+
+                document.getElementById("img").src=i+".jpg";
+            
+
+            });
+            $("#previous").click(function(){
+                if(i>1){
+                i=i-1
+                }
+                else{
+                    i=4
+                }
+                document.getElementById("img").src=i+".jpg";
+            })
+        });
+    </script>
+    <div class="container">
+        <div class="box">
+        <div id="imgbox">
+            <img src="1.jpg"  id="img">
+        </div>
+        <div>
+            <button id="previous">Previous</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="next">Next</button>
+        </div>
+      
+        </div>
+    </div>
+    
+</body>
+</html>

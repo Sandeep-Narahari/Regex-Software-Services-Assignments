@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+function enter(){
+		var text = document.getElementById('text').value;
+		document.getElementById('myFour').innerHTML = text;
+	}
+
+
+        function replace(){
+
+            var findWord=document.getElementById("find").value;
+            var replaceword= document.getElementById("replacewith").value;
+        
+            document.getElementById("myFour").innerHTML= document.getElementById("myFour").innerHTML.replaceAll(findWord,replaceword)
+
+        
+
+        }
+        
+    </script>
+
+
+    <fieldset>
+        <table>
+            <legend align= "center" >find and replace assignment </legend>
+            <tr>
+                <td>
+                    <label for="text">Enter text</label>
+                    <input type="text" name="mytext" id="text"> <br> <br>
+
+                    <button onclick="enter();">Enter</button> <br> <br>
+
+                    <label for="find">Enter the word to change</label>
+                    <input type="text" name="finding" id="find"><br><br>
+
+                    <label for="replacewith">Enter the replace word</label>
+                    <input type="text" name="replac" id="replacewith" > <br><br>
+
+                    <button onclick=replace()>submit</button>
+                </td>
+            </tr>
+
+        </table>
+    </fieldset>
+    
+    <div id="myFour"></div>
+</body>
+</html>
